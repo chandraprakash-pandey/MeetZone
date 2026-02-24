@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {NavLink, useNavigate} from 'react-router-dom'
 
 export default function App() {
   const navigate = useNavigate();
+  const [meetId, setMeetId] = useState(false);
 
   const generateToken=()=>{
     // alert("Create Meeting Clicked")
@@ -20,13 +21,19 @@ export default function App() {
     navigate(`/${token}`);
   }
 
+  const joinMeeting = () => {
+    
+  }
+
   return (
     <div className="h-screen flex justify-center items-center flex-col gap-10 bg-gray-100">
       <h1 className="text-5xl font-bold">Welcome to MeetingZone</h1>
       <div className='flex gap-5'>
         <button className='text-white bg-blue-400  px-7 py-5 text-2xl rounded-2xl cursor-pointer' onClick={generateToken}>Create Meeting</button>
-        <button className='text-white bg-green-400  px-7 py-5 text-2xl rounded-2xl cursor-pointer'>Join Meeting</button>
+        <button className='text-white bg-green-400  px-7 py-5 text-2xl rounded-2xl cursor-pointer' onClick={setMeetId(true)}>Join Meeting</button>
       </div>
+
+      {}
 
     </div>
   )
