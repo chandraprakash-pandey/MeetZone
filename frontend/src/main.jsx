@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import {createBrowserRouter, createRoutesFromElements, Route , RouterProvider } from "react-router-dom" 
 import './index.css'
 import App from './App.jsx'
-import MeetRoom from './meetRoom.jsx'
+import MeetRoom from './MeetRoom.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
